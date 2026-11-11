@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Joyeux anniversaire Thierry</title>
+<style>
+body {
+  margin:0;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  font-family:Georgia,serif;
+  color:#fff5d7;
+  background:radial-gradient(circle,#24558b,#06152f);
+  padding:20px;
+}
+.wrap {width:100%;max-width:520px}
+h1 {color:#ffe6a0;font-weight:normal}
+.gift {
+  font-size:120px;
+  cursor:pointer;
+  animation:bounce 1.5s infinite;
+}
+@keyframes bounce {
+  50% {transform:translateY(-12px)}
+}
+.hint {color:#f3d88c}
+.letter {
+  display:none;
+  background:#fff8e5;
+  color:#173b69;
+  padding:25px;
+  border:2px solid #e7c36b;
+  border-radius:15px;
+  text-align:left;
+  line-height:1.7;
+  animation:appear 1s;
+}
+.letter.show {display:block}
+@keyframes appear {
+  from {opacity:0;transform:translateY(25px)}
+  to {opacity:1;transform:translateY(0)}
+}
+.letter h2 {color:#173b69}
+.sign {text-align:right;color:#98702c}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Un cadeau pour toi 🎁</h1>
+  <p>J'ai une surprise pour toi...</p>
+  <div class="gift" onclick="ouvrir()">🎁</div>
+  <p class="hint">Touche le cadeau pour l'ouvrir 💙</p>
+
+  <div class="letter" id="lettre">
+    <h2>Joyeux anniversaire Thierry Diakhité ! ✨</h2>
+    <p>En ce jour spécial, je te souhaite une merveilleuse journée remplie de joie, de sourires et de belles surprises.</p>
+    <p>Que cette nouvelle année de ta vie t'apporte la santé, la paix du cœur, la réussite dans tes projets et la force de réaliser tes rêves.</p>
+    <p>Que chaque porte qui s'ouvre devant toi te conduise vers de belles opportunités. N'oublie jamais que tu es une personne précieuse et que tu mérites le meilleur.</p>
+    <p>Profite pleinement de ta journée. Que Dieu veille sur toi et t'accorde encore de nombreuses années de bonheur.</p>
+    <p class="sign">Avec toute mon affection 💙</p>
+  </div>
+</div>
+<script>
+function ouvrir() {
+  document.getElementById("lettre").classList.add("show");
+}
+</script>
+</body>
+</html>
